@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         body: const SafeArea(
-          child: ProfileCard(),
+          child: Center(child: ProfileCard()),
         ),
       ),
     );

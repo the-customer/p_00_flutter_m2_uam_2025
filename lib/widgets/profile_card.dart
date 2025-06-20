@@ -28,17 +28,51 @@ class ProfileCard extends StatelessWidget {
               "Developpeuse Flutter et Formatrice passionnee.\nSpecialisee dans le developpement d'applications mobiles et le design d'interface utilisateur.",textAlign: TextAlign.center,
               ),
               const Divider(height: 32, thickness: 1,),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  InfoItem(icon: Icons.email, label: "Email"),
+                  InfoItem(icon: Icons.phone, label: "Phone"),
+                  InfoItem(icon: Icons.location_city, label: "Address"),
+                ],
+              ),
+              const Divider(height: 24, thickness: 1,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
-                  Text("text1"),
+                children: [
+                  ElevatedButton(
+                    onPressed: (){}, 
+                    child: const Text("Profile")
+                  ),
                   // Expanded(child: SizedBox()),
-                  Text("text2"),
+                  OutlinedButton(
+                    onPressed: (){},
+                    child: const Text("Contact"),
+                  ),
                 ],
               )
           ],
         )
       ),
+    );
+  }
+}
+
+
+class InfoItem extends StatelessWidget {
+  final IconData icon;
+  final String label;
+
+  const InfoItem({super.key,required this.icon, required this.label});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Icon(icon, size: 28, color: Colors.red,),
+        SizedBox(height: 4,),
+        Text(label, style: TextStyle(fontSize: 12,)),
+      ],
     );
   }
 }
