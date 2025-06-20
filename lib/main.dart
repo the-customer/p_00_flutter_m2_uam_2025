@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:p_00/widgets/my_counter.dart';
 import 'package:p_00/widgets/profile_card.dart';
 
 void main() {
@@ -30,7 +31,8 @@ class MyApp extends StatelessWidget {
           ),
         ),
         body: const SafeArea(
-          child: Center(child: ProfileCard()),
+          // child: Center(child: ProfileCard()),
+          child: MyCounter(),
         ),
       ),
     );
